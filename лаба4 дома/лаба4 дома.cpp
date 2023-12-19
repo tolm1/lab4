@@ -40,7 +40,6 @@ public:
         this->author = author;
         this->genre = genre;
     }
-    //~Book() {};
 
     /*void settitle(const string& newtitle) {
         title = newtitle;
@@ -68,6 +67,8 @@ public:
         return book1->getautor() < book2->getautor();
     }
 
+    ~Book() {};
+
 private:
     string title;
     string author;
@@ -84,6 +85,8 @@ public:
         cout << "Автор " << this->getautor() << endl;
         cout << "Жанр " << "фантатсика" << endl;
     }
+
+    ~Fiction() {};
 };
 
 
@@ -96,6 +99,8 @@ public:
         cout << "Автор " << this->getautor() << endl;
         cout << "Жанр " << "не фантатсика" << endl;
     }
+
+    ~NoFiction() {};
 };
 
 
@@ -116,7 +121,7 @@ int main()
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
 
-    std::vector<Book*> book;
+    vector<Book*> book;
     int choice;
 
     do {
